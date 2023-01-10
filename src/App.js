@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Input from "./Input";
+import Select from "./Select";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <><h1 className="header">Podręczny kantor</h1>
+      <form className="form">
+        <fieldset className="form__field">
+          <legend className="form__legend">Kalkulator walut</legend>
+          <div>
+            Kwota*:
+            <Input />
+          </div>
+          <div>Wybierz walutę:
+            <Select />
+          </div>
+          <div>
+            <button className="form__button button">Przelicz</button>
+            <span className="form__result">N/A</span>
+          </div>
+          <p>
+            Pole oznaczone * jest wymagane.
+          </p>
+          <p>
+            Kurs z dnia: 09-11-2022
+          </p>
+        </fieldset>
+      </form>
+    </>
   );
 }
 
